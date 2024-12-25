@@ -10,7 +10,6 @@
         nav a:hover { text-decoration: underline; }
         section { display: none; }
         #main { display: block; }
-        #blog, #vlogs, #pods { display: block; }
     </style>
 </head>
 <body>
@@ -29,23 +28,22 @@
         <p>soon i will be uploading vlogs, podcasts, and blogs for me and my friends.</p>
     </section>
 
-   <!-- Blog Section -->
-<section id="blog">
-    <p><a href="#blog1" onclick="showSection('blog1')">blog entry 1</a></p>
-    <p><a href="#blog2" onclick="showSection('blog2')">blog entry 2</a></p>
-    <p><a href="#blog3" onclick="showSection('blog3')">blog entry 3</a></p>
+    <!-- Blog Section -->
+    <section id="blog">
+        <p><a href="#blog1" onclick="showSection('blog1')">blog entry 1</a></p>
+        <p><a href="#blog2" onclick="showSection('blog2')">blog entry 2</a></p>
+        <p><a href="#blog3" onclick="showSection('blog3')">blog entry 3</a></p>
 
-    <section id="blog1">
-        <p>this is a short placeholder text for blog entry 1. reflecting on life and the passing moments.</p>
+        <section id="blog1">
+            <p>this is a short placeholder text for blog entry 1. reflecting on life and the passing moments.</p>
+        </section>
+        <section id="blog2">
+            <p>this is a short placeholder text for blog entry 2. exploring new ideas in a world of constant change.</p>
+        </section>
+        <section id="blog3">
+            <p>this is a short placeholder text for blog entry 3. finding beauty in simplicity and daily routines.</p>
+        </section>
     </section>
-    <section id="blog2">
-        <p>this is a short placeholder text for blog entry 2. exploring new ideas in a world of constant change.</p>
-    </section>
-    <section id="blog3">
-        <p>this is a short placeholder text for blog entry 3. finding beauty in simplicity and daily routines.</p>
-    </section>
-</section>
-
 
     <!-- Vlogs Section -->
     <section id="vlogs">
@@ -71,6 +69,9 @@
             // Den gewünschten Abschnitt anzeigen
             document.getElementById(sectionId).style.display = 'block';
         }
+
+        // Beim Laden der Seite den "main"-Abschnitt anzeigen
+        window.onload = () => showSection('main');
     </script>
 
 </body>
