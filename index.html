@@ -6,7 +6,7 @@
     <title>my minimal website</title>
     <style>
         body { font-family: Arial, sans-serif; text-align: center; margin: 0; padding: 0; background-color: white; color: black; font-size: 16px; }
-        nav a { text-decoration: none; color: black; padding: 1em; display: inline-block; }
+        nav a { text-decoration: none; color: black; padding: 1em; display: block; }
         nav a:hover { text-decoration: underline; }
         section { display: none; }
         #main { display: block; }
@@ -34,33 +34,33 @@
 
     <!-- Blog Section -->
     <section id="blog">
-        <p><a href="#blog1" onclick="showSection('blog1')">blog entry 1</a> | 
-           <a href="#blog2" onclick="showSection('blog2')">blog entry 2</a> | 
-           <a href="#blog3" onclick="showSection('blog3')">blog entry 3</a></p>
+        <p><a href="#blog1" onclick="showSection('blog1')">blog entry 1</a></p>
+        <p><a href="#blog2" onclick="showSection('blog2')">blog entry 2</a></p>
+        <p><a href="#blog3" onclick="showSection('blog3')">blog entry 3</a></p>
 
         <section id="blog1">
-            <p>this is a placeholder for blog entry 1.</p>
+            <p>this is a short placeholder text for blog entry 1.</p>
         </section>
         <section id="blog2">
-            <p>this is a placeholder for blog entry 2.</p>
+            <p>this is a short placeholder text for blog entry 2.</p>
         </section>
         <section id="blog3">
-            <p>this is a placeholder for blog entry 3.</p>
+            <p>this is a short placeholder text for blog entry 3.</p>
         </section>
     </section>
 
     <!-- Vlogs Section -->
     <section id="vlogs">
-        <p><a href="https://www.youtube.com/channel/UCnmKbqgzmcLD3siK-RAkyhA">video-link</a> | 
-           <a href="https://www.youtube.com/channel/UCnmKbqgzmcLD3siK-RAkyhA">video-link</a> | 
-           <a href="https://www.youtube.com/channel/UCnmKbqgzmcLD3siK-RAkyhA">video-link</a></p>
+        <p><a href="https://www.youtube.com/channel/UCnmKbqgzmcLD3siK-RAkyhA">video-link</a></p>
+        <p><a href="https://www.youtube.com/channel/UCnmKbqgzmcLD3siK-RAkyhA">video-link</a></p>
+        <p><a href="https://www.youtube.com/channel/UCnmKbqgzmcLD3siK-RAkyhA">video-link</a></p>
     </section>
 
     <!-- Pods Section -->
     <section id="pods">
-        <p><a href="https://www.youtube.com/channel/UCnmKbqgzmcLD3siK-RAkyhA">podcast-link</a> | 
-           <a href="https://www.youtube.com/channel/UCnmKbqgzmcLD3siK-RAkyhA">podcast-link</a> | 
-           <a href="https://www.youtube.com/channel/UCnmKbqgzmcLD3siK-RAkyhA">podcast-link</a></p>
+        <p><a href="https://www.youtube.com/channel/UCnmKbqgzmcLD3siK-RAkyhA">podcast-link</a></p>
+        <p><a href="https://www.youtube.com/channel/UCnmKbqgzmcLD3siK-RAkyhA">podcast-link</a></p>
+        <p><a href="https://www.youtube.com/channel/UCnmKbqgzmcLD3siK-RAkyhA">podcast-link</a></p>
     </section>
 
     <script>
@@ -74,6 +74,6 @@
             document.getElementById(sectionId).style.display = 'block';
         }
     </script>
-    
+
 </body>
 </html>
