@@ -28,7 +28,7 @@
         <p>soon i will be uploading vlogs, podcasts, and blogs for me and my friends.</p>
     </section>
 
-    <!-- Blog Section -->
+   <!-- Blog Section -->
     <section id="blog">
         <p><a href="#blog1" onclick="showSection('blog1')">blog entry 1</a></p>
         <p><a href="#blog2" onclick="showSection('blog2')">blog entry 2</a></p>
@@ -70,8 +70,15 @@
             document.getElementById(sectionId).style.display = 'block';
         }
 
-        // Beim Laden der Seite den "main"-Abschnitt anzeigen
-        window.onload = () => showSection('main');
+        // Beim Laden der Seite den Abschnitt basierend auf dem URL-Fragment anzeigen
+        window.onload = () => {
+            const hash = window.location.hash.substring(1); // Fragt das Fragment der URL ab (z. B. 'blog1')
+            if (hash) {
+                showSection(hash); // Zeigt den Abschnitt basierend auf der URL
+            } else {
+                showSection('main'); // Zeigt die Hauptseite, falls kein Fragment angegeben ist
+            }
+        };
     </script>
 
 </body>
