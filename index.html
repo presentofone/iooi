@@ -5,59 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>my minimal website</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin: 0; padding: 0; background-color: white; color: black; }
-        h1 { font-size: 1.5em; text-transform: lowercase; }
-        h2 { font-size: 1.2em; }
-        nav a { text-decoration: none; color: black; padding: 0.5em; }
+        body { font-family: Arial, sans-serif; text-align: center; margin: 0; padding: 0; background-color: white; color: black; font-size: 16px; }
+        nav a { text-decoration: none; color: black; padding: 1em; display: inline-block; }
         nav a:hover { text-decoration: underline; }
-        section { margin: 2em 0; }
+        section { display: none; }
+        #main { display: block; }
     </style>
 </head>
 <body>
 
     <!-- Main Page -->
     <h1>hi, thats my site yo.</h1>
-    <h1>soon i will be uploading vlogs, podcasts, and blogs for me and my friends.</h1>
+    <p>soon i will be uploading vlogs, podcasts, and blogs for me and my friends.</p>
+    
+    <!-- Navigation Links -->
     <nav>
-        <a href="#main">main</a> | <a href="#blog">blog</a> | <a href="#vlogs">vlogs</a> | <a href="#pods">pods</a>
+        <a href="#main" onclick="showSection('main')">main</a>
+        <a href="#blog" onclick="showSection('blog')">blog</a>
+        <a href="#vlogs" onclick="showSection('vlogs')">vlogs</a>
+        <a href="#pods" onclick="showSection('pods')">pods</a>
     </nav>
 
-    <!-- Blog Page -->
+    <!-- Main Section -->
+    <section id="main">
+        <p>hi, thats my site yo.</p>
+        <p>soon i will be uploading vlogs, podcasts, and blogs for me and my friends.</p>
+    </section>
+
+    <!-- Blog Section -->
     <section id="blog">
-        <h2>blog</h2>
-        <a href="#blog1">blog entry 1</a> | 
-        <a href="#blog2">blog entry 2</a> | 
-        <a href="#blog3">blog entry 3</a>
-        
+        <p><a href="#blog1" onclick="showSection('blog1')">blog entry 1</a> | 
+           <a href="#blog2" onclick="showSection('blog2')">blog entry 2</a> | 
+           <a href="#blog3" onclick="showSection('blog3')">blog entry 3</a></p>
+
         <section id="blog1">
-            <h2>blog entry 1</h2>
             <p>this is a placeholder for blog entry 1.</p>
         </section>
         <section id="blog2">
-            <h2>blog entry 2</h2>
             <p>this is a placeholder for blog entry 2.</p>
         </section>
         <section id="blog3">
-            <h2>blog entry 3</h2>
             <p>this is a placeholder for blog entry 3.</p>
         </section>
     </section>
 
-    <!-- Vlogs Page -->
+    <!-- Vlogs Section -->
     <section id="vlogs">
-        <h2>vlogs</h2>
-        <a href="https://www.youtube.com/channel/UCnmKbqgzmcLD3siK-RAkyhA">video-link</a> | 
-        <a href="https://www.youtube.com/channel/UCnmKbqgzmcLD3siK-RAkyhA">video-link</a> | 
-        <a href="https://www.youtube.com/channel/UCnmKbqgzmcLD3siK-RAkyhA">video-link</a>
+        <p><a href="https://www.youtube.com/channel/UCnmKbqgzmcLD3siK-RAkyhA">video-link</a> | 
+           <a href="https://www.youtube.com/channel/UCnmKbqgzmcLD3siK-RAkyhA">video-link</a> | 
+           <a href="https://www.youtube.com/channel/UCnmKbqgzmcLD3siK-RAkyhA">video-link</a></p>
     </section>
 
-    <!-- Pods Page -->
+    <!-- Pods Section -->
     <section id="pods">
-        <h2>pods</h2>
-        <a href="https://www.youtube.com/channel/UCnmKbqgzmcLD3siK-RAkyhA">podcast-link</a> | 
-        <a href="https://www.youtube.com/channel/UCnmKbqgzmcLD3siK-RAkyhA">podcast-link</a> | 
-        <a href="https://www.youtube.com/channel/UCnmKbqgzmcLD3siK-RAkyhA">podcast-link</a>
+        <p><a href="https://www.youtube.com/channel/UCnmKbqgzmcLD3siK-RAkyhA">podcast-link</a> | 
+           <a href="https://www.youtube.com/channel/UCnmKbqgzmcLD3siK-RAkyhA">podcast-link</a> | 
+           <a href="https://www.youtube.com/channel/UCnmKbqgzmcLD3siK-RAkyhA">podcast-link</a></p>
     </section>
 
+    <script>
+        function showSection(sectionId) {
+            // Alle Abschnitte ausblenden
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+            // Den gewünschten Abschnitt anzeigen
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+    
 </body>
 </html>
