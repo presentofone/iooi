@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>my minimal website</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin: 0; padding: 0; background-color: white; color: black; font-size: 16px; }
+        body { font-family: Arial, sans-serif; text-align: center; margin: 0; padding: 0; background: white; color: black; font-size: 16px; }
         nav a { text-decoration: none; color: black; padding: 1em; display: inline-block; }
         nav a:hover { text-decoration: underline; }
         section { display: none; }
@@ -13,8 +13,6 @@
     </style>
 </head>
 <body>
-
-    <!-- Navigation Links -->
     <nav>
         <a href="#main" onclick="showSection('main')">main</a>
         <a href="#blog" onclick="showSection('blog')">blog</a>
@@ -22,38 +20,26 @@
         <a href="#pods" onclick="showSection('pods')">pods</a>
     </nav>
 
-    <!-- Main Section -->
     <section id="main">
         <p>hi, thats my site yo.</p>
         <p>soon i will be uploading vlogs, podcasts, and blogs for me and my friends.</p>
     </section>
 
-   <!-- Blog Section -->
-<section id="blog">
-    <p><a href="#blog1" onclick="showSection('blog1')">blog entry 1</a></p>
-    <p><a href="#blog2" onclick="showSection('blog2')">blog entry 2</a></p>
-    <p><a href="#blog3" onclick="showSection('blog3')">blog entry 3</a></p>
+    <section id="blog">
+        <p><a href="#blog1" onclick="showSection('blog1')">blog entry 1</a></p>
+        <p><a href="#blog2" onclick="showSection('blog2')">blog entry 2</a></p>
+        <p><a href="#blog3" onclick="showSection('blog3')">blog entry 3</a></p>
+        <section id="blog1"><p>this is a short placeholder text for blog entry 1. reflecting on life and the passing moments.</p></section>
+        <section id="blog2"><p>this is a short placeholder text for blog entry 2. exploring new ideas in a world of constant change.</p></section>
+        <section id="blog3"><p>this is a short placeholder text for blog entry 3. finding beauty in simplicity and daily routines.</p></section>
+    </section>
 
-    <!-- Placeholder Text for Blog Entries -->
-    <section id="blog1" class="blog-entry">
-        <p>this is a short placeholder text for blog entry 1. reflecting on life and the passing moments.</p>
-    </section>
-    <section id="blog2" class="blog-entry">
-        <p>this is a short placeholder text for blog entry 2. exploring new ideas in a world of constant change.</p>
-    </section>
-    <section id="blog3" class="blog-entry">
-        <p>this is a short placeholder text for blog entry 3. finding beauty in simplicity and daily routines.</p>
-    </section>
-</section>
-
-    <!-- Vlogs Section -->
     <section id="vlogs">
         <p><a href="https://www.youtube.com/channel/UCnmKbqgzmcLD3siK-RAkyhA">video-link</a></p>
         <p><a href="https://www.youtube.com/channel/UCnmKbqgzmcLD3siK-RAkyhA">video-link</a></p>
         <p><a href="https://www.youtube.com/channel/UCnmKbqgzmcLD3siK-RAkyhA">video-link</a></p>
     </section>
 
-    <!-- Pods Section -->
     <section id="pods">
         <p><a href="https://www.youtube.com/channel/UCnmKbqgzmcLD3siK-RAkyhA">podcast-link</a></p>
         <p><a href="https://www.youtube.com/channel/UCnmKbqgzmcLD3siK-RAkyhA">podcast-link</a></p>
@@ -61,16 +47,10 @@
     </section>
 
     <script>
-        function showSection(sectionId) {
-            // Alle Abschnitte ausblenden
-            const sections = document.querySelectorAll('section');
-            sections.forEach(section => {
-                section.style.display = 'none';
-            });
-            // Den gewünschten Abschnitt anzeigen
-            document.getElementById(sectionId).style.display = 'block';
+        function showSection(id) {
+            document.querySelectorAll('section').forEach(section => section.style.display = 'none');
+            document.getElementById(id).style.display = 'block';
         }
     </script>
-
 </body>
 </html>
