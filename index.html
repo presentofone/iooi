@@ -24,4 +24,52 @@
 
     <!-- Main Section -->
     <section id="main">
- 
+        <p>hi, thats my site yo.</p>
+        <p>soon i will be uploading vlogs, podcasts, and blogs for me and my friends.</p>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog">
+        <p><a href="#blog1" onclick="showSection('blog1')">blog entry 1</a></p>
+        <p><a href="#blog2" onclick="showSection('blog2')">blog entry 2</a></p>
+        <p><a href="#blog3" onclick="showSection('blog3')">blog entry 3</a></p>
+
+        <section id="blog1">
+            <p>this is a short placeholder text for blog entry 1.</p>
+        </section>
+        <section id="blog2">
+            <p>this is a short placeholder text for blog entry 2.</p>
+        </section>
+        <section id="blog3">
+            <p>this is a short placeholder text for blog entry 3.</p>
+        </section>
+    </section>
+
+    <!-- Vlogs Section -->
+    <section id="vlogs">
+        <p><a href="https://www.youtube.com/channel/UCnmKbqgzmcLD3siK-RAkyhA">video-link</a></p>
+        <p><a href="https://www.youtube.com/channel/UCnmKbqgzmcLD3siK-RAkyhA">video-link</a></p>
+        <p><a href="https://www.youtube.com/channel/UCnmKbqgzmcLD3siK-RAkyhA">video-link</a></p>
+    </section>
+
+    <!-- Pods Section -->
+    <section id="pods">
+        <p><a href="https://www.youtube.com/channel/UCnmKbqgzmcLD3siK-RAkyhA">podcast-link</a></p>
+        <p><a href="https://www.youtube.com/channel/UCnmKbqgzmcLD3siK-RAkyhA">podcast-link</a></p>
+        <p><a href="https://www.youtube.com/channel/UCnmKbqgzmcLD3siK-RAkyhA">podcast-link</a></p>
+    </section>
+
+    <script>
+        function showSection(sectionId) {
+            // Alle Abschnitte ausblenden
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+            // Den gewünschten Abschnitt anzeigen
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
