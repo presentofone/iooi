@@ -29,7 +29,7 @@
     </section>
 
    <!-- Blog Section -->
-    <section id="blog">
+   <section id="blog">
         <p><a href="#blog1" onclick="showSection('blog1')">blog entry 1</a></p>
         <p><a href="#blog2" onclick="showSection('blog2')">blog entry 2</a></p>
         <p><a href="#blog3" onclick="showSection('blog3')">blog entry 3</a></p>
@@ -70,15 +70,13 @@
             document.getElementById(sectionId).style.display = 'block';
         }
 
-        // Beim Laden der Seite den Abschnitt basierend auf dem URL-Fragment anzeigen
-        window.onload = () => {
-            const hash = window.location.hash.substring(1); // Fragt das Fragment der URL ab (z. B. 'blog1')
+        // Beim Laden der Seite überprüfen, ob eine bestimmte Section durch den Anker-Link angesprungen wird
+        window.onload = function() {
+            const hash = window.location.hash;
             if (hash) {
-                showSection(hash); // Zeigt den Abschnitt basierend auf der URL
-            } else {
-                showSection('main'); // Zeigt die Hauptseite, falls kein Fragment angegeben ist
+                showSection(hash.substring(1)); // Entfernt das '#' und zeigt den entsprechenden Abschnitt an
             }
-        };
+        }
     </script>
 
 </body>
