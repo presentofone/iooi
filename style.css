@@ -1,11 +1,16 @@
-body {
-    margin: 0;
-    padding: 0;
-}
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
 
-p, section {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: left;
-}
+    .container {
+        width: 80%;
+        max-width: 800px;
+        padding: 20px;
+        box-sizing: border-box;
+        text-align: left;
+    }
+</style>
