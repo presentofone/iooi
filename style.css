@@ -1,14 +1,46 @@
+/* Allgemeine Stile */
 body {
-    margin: 0; /* Standard-Abstände des Browsers entfernen */
+    margin: 0; /* Entfernt Standardabstände des Browsers */
     padding: 0; /* Kein zusätzlicher Innenabstand */
+    font-family: Arial, sans-serif; /* Einheitliche Schriftart */
+    background-color: white; /* Hintergrundfarbe */
+    color: black; /* Textfarbe */
+    font-size: 16px; /* Grundgröße des Textes */
 }
 
+/* Navigation bleibt mittig */
+nav {
+    text-align: center; /* Links zentriert anzeigen */
+    margin: 20px 0; /* Abstand oberhalb und unterhalb der Navigation */
+}
+
+nav a {
+    text-decoration: none; /* Entfernt Unterstreichungen */
+    color: black; /* Textfarbe */
+    padding: 1em; /* Abstand innerhalb der Links */
+    display: inline-block; /* Links nebeneinander */
+}
+
+nav a:hover {
+    text-decoration: underline; /* Unterstreichung beim Hover */
+}
+
+/* Container für Inhalte */
 .container {
-    margin-left: 10%; /* 10% Abstand vom linken Rand */
-    margin-right: 10%; /* Optional: Symmetrischer Abstand rechts */
+    margin: 0 auto; /* Zentriert den gesamten Inhalt im Browser */
     max-width: 800px; /* Maximale Breite für größere Bildschirme */
-    padding: 20px; /* Innenabstand */
-    box-sizing: border-box; /* Padding bleibt innerhalb der Breite */
+    padding-left: 10%; /* Abstand links, nicht direkt am Rand */
+    padding-right: 10%; /* Optional: Abstand rechts */
     text-align: left; /* Text linksbündig */
+    box-sizing: border-box; /* Padding innerhalb der Breite */
 }
 
+/* Standard für alle Abschnitte */
+section {
+    display: none; /* Alle Sektionen initial ausblenden */
+}
+
+/* Standard für die Hauptsektion */
+#main {
+    display: block; /* Die Hauptsektion initial anzeigen */
+}
