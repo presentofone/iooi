@@ -1,16 +1,14 @@
-<style>
-    body {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-    }
+body {
+    margin: 0; /* Standard-Abstände des Browsers entfernen */
+    padding: 0; /* Kein zusätzlicher Innenabstand */
+}
 
-    .container {
-        width: 80%;
-        max-width: 800px;
-        padding: 20px;
-        box-sizing: border-box;
-        text-align: left;
-    }
-</style>
+.container {
+    margin-left: 10%; /* 10% Abstand vom linken Rand */
+    margin-right: 10%; /* Optional: Symmetrischer Abstand rechts */
+    max-width: 800px; /* Maximale Breite für größere Bildschirme */
+    padding: 20px; /* Innenabstand */
+    box-sizing: border-box; /* Padding bleibt innerhalb der Breite */
+    text-align: left; /* Text linksbündig */
+}
+
