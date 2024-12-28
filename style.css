@@ -27,7 +27,43 @@ section {
     max-width: 200px;
     border: 1px solid #ddd;
     border-radius: 8px;
-    background-color: #f1f9f9;
+    background-color: /* Allgemeine Stile */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: black;
+    font-size: 16px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    padding: 1em;
+    display: inline-block;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+section {
+    display: none;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #000000;
+    text-align: left;
+}
+
+#main {
+    display: block;
+}
+;
     text-align: left;
 }
 
