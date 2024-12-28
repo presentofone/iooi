@@ -1,131 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+/* Allgemeine Stile für die gesamte Seite */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: black;
+    font-size: 16px;
+}
 
-    <link rel="stylesheet" href="styles.css">
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>presentofone</title>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin: 0; padding: 0; background-color: white; color: black; font-size: 16px; }
-        nav a { text-decoration: none; color: black; padding: 1em; display: inline-block; }
-        nav a:hover { text-decoration: underline; }
-        section { display: none; } 
-        #main { display: block; }
-    </style>
-</head>
-<body>
+/* Navigation */
+nav {
+    margin: 20px 0;
+}
 
-    <!-- Navigation Links -->
-    <nav>
-        <a href="#main" onclick="showSection('main')">main</a>
-        <a href="#blog" onclick="showSection('blog')">blog</a>
-        <a href="#vlog" onclick="showSection('vlog')">vlog</a>
-        <a href="#pod" onclick="showSection('pod')">pod</a>
-        <a href="#joy" onclick="showSection('joy')">joy</a>
-        <a href="#now" onclick="showSection('now')">now</a>
-        
-    </nav>
+nav a {
+    text-decoration: none;
+    color: black;
+    padding: 1em;
+    display: inline-block;
+}
 
-    <!-- Main Section -->
-    <section id="main">
-        <p>
-hi, thats the site!<br><br>  
-hier kommen vlogs, podcasts und blogs – für freunde und alle die bock haben
-<br><br>  
+nav a:hover {
+    text-decoration: underline;
+}
 
-aber warum?<br><br>  
-um zu teilen, was passiert, was inspiriert und woran gerade gearbeitet wird.<br><br>  
+/* Sektionen */
+section {
+    display: none; /* Standardmäßig unsichtbar */
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    text-align: left;
+}
 
-"comparison is the thief of joy."<br><br>  
-deshalb läuft das hier über eine persönliche website. <br>social media ist voll mit werbung und influencern und darauf ausgelegt, nutzer möglichst lang auf der plattform zu halten und die aufmerksamkeitsspanne zu ficken.<br>die website bleibt frei von ablenkungen.<br><br>  
-
-das design ist vorerst minimalistisch, aber mit der zeit kommen anpassungen.
-</p>
-    </section>
-
-   <!-- Blog Section -->
-   <section id="blog">
-        <p><a href="#24.12.25" onclick="showSection('24.12.25')">24.12.25</a></p>
-        <p><a href="#24.12.26-halzschmerzen" onclick="showSection('24.12.26-halzschmerzen')"></a></p>
-        <p><a href="#blog3" onclick="showSection('blog3')"></a></p>
-    </section>
-
-    <section id="24.12.25">
-        <p>so website ist eingerichtet. <br>jetzt kann es losgehen. wir schreiben den 25 dezember 24. <br>Das Jahr neigt sich dem Ende und die Zeit verläuft von Jashr zu Jahr schneller. <br>Ich habe heute meine Bilder und Videos auf meiner Festplatte von 2020 sortiert. Das waren echt teilweise gute und lustige Momente. <br>Besonders die Schulprojekte waren geil. Warum? <br>Weil wir keine wirtschaftlichen interessen hatten, sondern einfach draf gelebt haben und uns kreativ ohne große Filter ausgedrückt haben. <br>Wir haben einfach abgeschaltet und gelebt. Solche Momente kommen in meiner aktuellen Lebenssituation immer seltener vor. <br>Aber das wird sich jetzt ändern. Ich mache diese website nur für mich und meine freunde. <br>Halte alles Privat, ohne das Algorithmen auf Insta oder Youtube greifen. <br>Wenn Leute interesse an meinem Leben haben, dann müssen sie Pro-Aktiv auf meine Website kommen. Und das finde ich einen guten Anfang, um Macht des Internets zurückzugelangen. <br>Mal schauen wem ich meine Seite irgendwann zeige und den Link share. <br>Hallo Freund der Sonne :D <br>Willkomen in meinem Leben</p>
-    </section>
-
-    <section id="24.12.26-halzschmerzen">
-        <p>this is a short placeholder text for blog entry 2. exploring new ideas in a world of constant change.</p>
-    </section>
-
-    <section id="">
-        <p>this is a short placeholder text for blog entry 3. finding beauty in simplicity and daily routines.</p>
-    </section>
-
-    <!-- Vlogs Section -->
-    <section id="vlog">
-        <p><a href="x">24.12.22-the struggle of getting paid to be creative</a></p>
-        <p>ein ausschnitt aus meinem leben, bei dem ich einfach mal meine struggles bei einem nightride loswerde..<br>nicht zu ernst nehmen, habe ungefilter drauf los geredet, das hilft mir manchmal dinge zu verarbeiten.</p>
-        <p><a href="https://www.youtube.com/channel/UCnmKbqgzmcLD3siK-RAkyhA"></a></p>
-        <p><a href="https://www.youtube.com/channel/UCnmKbqgzmcLD3siK-RAkyhA"></a></p>
-    </section>
-
-    <!-- pod -->
-    <section id="pod">
-        <p>bald kommen hier podcasts</p>
-        <p><a href=""></a></p>
-        <p><a href="https://www.youtube.com/channel/UCnmKbqgzmcLD3siK-RAkyhA"></a></p>
-    </section>
-
-    <!-- joy -->
-    <section id="joy">
-    <p><a href="#discounter" onclick="showSection('discounter')">24.12.25-discounter</a></p>
-    </section>
-
-    
-    <section id="discounter">
-          <p>Habe Angefangen die Discounter auf Prime Video anzuschauen. Anfangs dachte ich die Serie wäre nicht so gut, bzw ein Abklatsch im Supermarkt von Stromberg oder The Office. <br>Aber die ist echt funny. Das geile an der Serie ist, dass das Skript nur vorgibt, was in der jeweiligen Scene passiert, aber die Schauspieler den Dialog komplett frei Improvisiert haben<br>Das ist ein sehr geiles Konzept und die Serie spricht für sich lol<br> Ich versuche sie nicht zu binge-watchen und die Serie bis zum Ende zu enjoyen und nicht zu schnell durchzusuchten.</p>
-    <br><br>24.12.27<br>joaa, 2 days later, i watched the hole 4 seosons of it. the ending isnt that satisfying, but the hole series is a solid
-        <br>5/7
-    </p>
-    
-    
-    </section>
-
-    <section id="now">
-        <p>hi, thats my now-page <br>
-        its is about my current priorities and how i want to live my life right now: <br> <br>
-
-        making cash on a 30-hour basis, enjoy life, and glorify the slow life.
-        </p>
-        
-    </section>
-
-
-
-    
-    
-    <script>
-        function showSection(sectionId) {
-            // Alle Abschnitte ausblenden
-            const sections = document.querySelectorAll('section');
-            sections.forEach(section => {
-                section.style.display = 'none';
-            });
-            // Den gewünschten Abschnitt anzeigen
-            document.getElementById(sectionId).style.display = 'block';
-        }
-
-        // Beim Laden der Seite überprüfen, ob eine bestimmte Section durch den Anker-Link angesprungen wird
-        window.onload = function() {
-            const hash = window.location.hash;
-            if (hash) {
-                showSection(hash.substring(1)); // Entfernt das '#' und zeigt den entsprechenden Abschnitt an
-            }
-        }
-    </script>
-
-</body>
-</html>
+/* Spezifischer Stil für die Hauptseite */
+#main {
+    display: block; /* Hauptseite standardmäßig sichtbar */
+}
