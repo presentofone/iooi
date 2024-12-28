@@ -4,7 +4,7 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0; /* Heller Grau-Ton für Hintergrund */
+    background-color: #f0000000; /* Heller Grau-Ton für Hintergrund */
     color: black;
     font-size: 16px;
 }
