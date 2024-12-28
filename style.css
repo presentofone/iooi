@@ -1,36 +1,45 @@
 /* Allgemeine Stile */
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    background-color: #f0000000; /* Heller Grau-Ton für Hintergrund */
-    color: black;
-    font-size: 16px;
+    margin: 0; /* Entfernt Standardabstände */
+    padding: 0; /* Kein Innenabstand */
+    font-family: Arial, sans-serif; /* Einheitliche Schrift */
+    background-color: white; /* Weißer Hintergrund */
+    color: black; /* Schwarzer Text */
+    font-size: 16px; /* Lesbare Schriftgröße */
+    line-height: 1.5; /* Angenehmer Zeilenabstand */
+}
+
+/* Navigation bleibt zentriert */
+nav {
+    text-align: center; /* Links mittig ausrichten */
+    margin: 20px 0; /* Abstand oben und unten */
 }
 
 nav a {
-    text-decoration: none;
-    color: black;
-    padding: 1em;
-    display: inline-block;
+    text-decoration: none; /* Entfernt Unterstreichungen */
+    color: black; /* Standardfarbe für Links */
+    padding: 10px 20px; /* Innenabstand */
+    display: inline-block; /* Links nebeneinander */
 }
 
 nav a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Unterstreichen bei Hover */
 }
 
+/* Container für Inhalte */
+.container {
+    margin: 0 auto; /* Zentriert den Inhalt */
+    max-width: 800px; /* Maximale Breite */
+    padding: 20px; /* Abstand innerhalb des Containers */
+    text-align: left; /* Text linksbündig */
+    box-sizing: border-box; /* Padding bleibt innerhalb der Breite */
+}
+
+/* Abschnitte */
 section {
-    display: none;
-    margin: 40px auto; /* Vertikaler Abstand + Zentrierung */
-    padding: 20px;
-    max-width: 800px; /* Begrenzte Breite des Blocks */
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #ffffff; /* Weißer Hintergrund für Textbox */
-    text-align: left;
+    display: none; /* Alle Abschnitte ausblenden */
 }
 
 #main {
-    display: block; /* Startseite sichtbar machen */
+    display: block; /* Hauptsektion wird angezeigt */
 }
